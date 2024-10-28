@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6a45e953c903d7839a1c6d12e3f89e70 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="
+    position: fixed; 
+    top: 10px; right: 10px; 
+    width: 250px; height: 120px; 
+    background-color: white; 
+    border: 2px solid black; 
+    padding: 10px; 
+    z-index: 1000;
+">
+    <b>According to the United Nations (as of 2023):</b><br>
+    Over 10,000 people across Tigray, mostly women and girls, were subjected to 
+    rape and other heinous acts of sexual violence as a weapon of war.
+</div>
+    
+            <div class="folium-map" id="map_6a45e953c903d7839a1c6d12e3f89e70" ></div>
+        
+    
+<div style="
+position: fixed;
+top: 10px;
+right: 10px;
+z-index: 9999;
+background-color: white;
+padding: 10px;
+border: 2px solid black;
+border-radius: 8px;
+width: 250px;
+height: auto;
+font-size: 12px;
+overflow: auto;
+">
+<b>According to the United Nations (as of 2023):</b><br>
+Over 10,000 people across Tigray, mostly women and girls, were subjected to 
+rape and other heinous acts of sexual violence as a weapon of war.
+</div>
+</body>
+<script>
+    
+    
+            var map_6a45e953c903d7839a1c6d12e3f89e70 = L.map(
+                "map_6a45e953c903d7839a1c6d12e3f89e70",
+                {
+                    center: [13.5, 39.5],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_31c9217d5aea204ebeb4d6461582cfbe = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_31c9217d5aea204ebeb4d6461582cfbe.addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+            var marker_218d17f580f3efe8d2ef0a9be1b3c4df = L.marker(
+                [13.4966644, 39.4768259],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_bb4b494561b85175edc2050394988671 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1558a380be49f4f151d0db9373691f4e = $(`<div id="html_1558a380be49f4f151d0db9373691f4e" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> Number of Victims: Multiple victims Category of Victims: Civilians, including women and children Demographics: Tigrayan ethnicity. Type of Sexual Violence: Rape, gang rape Legal Category: War crime Details of Violence: ENDF soldiers committed widespread rapes and gang rapes. Women were raped in front of their children and family members. Some were held as sexual slaves. Rapes of Tigrayan women and girls were often accompanied by other forms of violence designed to humiliate them, like beatings, threats, or being raped with foreign objects.  Context: Occurred during and after the military control of Mekele.<br>                 <b>Date:</b> November 28, 2020, to June 28, 2021<br>                 <b>Group Affiliation:</b> ENDF<br>                 <b>Details:</b> A safe house was established for rape survivors due to the widespread nature of the violence             </div>`)[0];
+                popup_bb4b494561b85175edc2050394988671.setContent(html_1558a380be49f4f151d0db9373691f4e);
+            
+        
+
+        marker_218d17f580f3efe8d2ef0a9be1b3c4df.bindPopup(popup_bb4b494561b85175edc2050394988671)
+        ;
+
+        
+    
+    
+            marker_218d17f580f3efe8d2ef0a9be1b3c4df.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_44378de8f382de2f69f04a769853f130 = L.marker(
+                [12.15063, 39.628837],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_b3a2e002269423301b70c1bcf8af498b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d15c14e45e0d73f07de82687ae696ac4 = $(`<div id="html_d15c14e45e0d73f07de82687ae696ac4" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> Women and girls as young as 11, Civilians, Amhara ethnicity. Type of Sexual Violence: Rape, beatings Legal Category: War crime Details of Violence: Tigrayan forces executed men in front of their families, and then beat and raped their wives and daughters. Some women report Tigrayan forces coerced them to cook for them and to provide food and water without compensation before being assaulted. Use of ethnic slurs during the attacks. Context: During searches after capturing the town.<br>                 <b>Date:</b> September 9, 2021<br>                 <b>Group Affiliation:</b> TPLF<br>                 <b>Details:</b> In several cases, Tigrayan forces told their victims that the rapes were revenge for the widespread rape of Tigrayan women and girls. In its preliminary response to questions submitted by the Commission, the Tigray authorities asserted that their forces were “people-centred, law-abiding and disciplined”. They also insisted that their rules of engagement prohibited extrajudicial killings, rape, torture and theft, among other forms of misconduct. Abuses by their forces were addressed “as per the code of conduct and disciplinary procedures of the army”. The Commission has not been able to verify whether or how the abuses have been addressed.             </div>`)[0];
+                popup_b3a2e002269423301b70c1bcf8af498b.setContent(html_d15c14e45e0d73f07de82687ae696ac4);
+            
+        
+
+        marker_44378de8f382de2f69f04a769853f130.bindPopup(popup_b3a2e002269423301b70c1bcf8af498b)
+        ;
+
+        
+    
+    
+            marker_44378de8f382de2f69f04a769853f130.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6423657ea8501522d7a1cdf72814d702 = L.marker(
+                [14.02038, 38.1639],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_8a33038c585b5b67336adc052a069f12 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a215a038bc3298ebfb78dde247bee1fd = $(`<div id="html_a215a038bc3298ebfb78dde247bee1fd" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> Number of Victims: 1 Category of Victims: Civilian (woman, lactating mother) Demographics: Tigrayan ethnicity. Type of Sexual Violence: Gang rape, sexual slavery, torture Legal Category: War crime Description of Incident: Details of Violence: The victim was abducted at a checkpoint, held captive, and gang-raped repeatedly over a four-day period. Perpetrators burned her nipple with a naked flame and inserted rocks, plastic, and tissue in her vagina, requiring hospital removal.- Context: Occurred during travel at a checkpoint<br>                 <b>Date:</b> Not specified (during the conflict period)<br>                 <b>Group Affiliation:</b> ENDF and Eritrean Defense forces<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_8a33038c585b5b67336adc052a069f12.setContent(html_a215a038bc3298ebfb78dde247bee1fd);
+            
+        
+
+        marker_6423657ea8501522d7a1cdf72814d702.bindPopup(popup_8a33038c585b5b67336adc052a069f12)
+        ;
+
+        
+    
+    
+            marker_6423657ea8501522d7a1cdf72814d702.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0b0e1246cc379df672adaf2f1158155f = L.marker(
+                [14.3001, 36.6262],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_cda65334b8bc904183a69a1570b7a376 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_494b6fea60713ff5f0532cc910b5c159 = $(`<div id="html_494b6fea60713ff5f0532cc910b5c159" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> 1 civilian woman of Tigrayan ethnicity. Type of Sexual Violence: Gang rape, torture Legal Category: War crime Description of Incident: Details of Violence: The victim was gang-raped by ENDF soldiers, and one soldier raped her with a knife. She showed severe scarring from plastic melted on her body. Context: Occurred during an attack on her village.<br>                 <b>Date:</b> Not specified (during the conflict period)<br>                 <b>Group Affiliation:</b> ENDF<br>                 <b>Details:</b> Forensic Evidence: Visible scarring on the victim             </div>`)[0];
+                popup_cda65334b8bc904183a69a1570b7a376.setContent(html_494b6fea60713ff5f0532cc910b5c159);
+            
+        
+
+        marker_0b0e1246cc379df672adaf2f1158155f.bindPopup(popup_cda65334b8bc904183a69a1570b7a376)
+        ;
+
+        
+    
+    
+            marker_0b0e1246cc379df672adaf2f1158155f.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_051b7bbfba05423dd3c1763dc9abe65d = L.marker(
+                [14.3001, 36.6262],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_4a2ce30d4e3b7725f3a78b09c7df4a68 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_91db60ce25d24a71f093ab39cc48b332 = $(`<div id="html_91db60ce25d24a71f093ab39cc48b332" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> One civilian woman of Tigrayan ethnicity. Type of Sexual Violence: Rape, verbal assault Legal Category: War crime Description of Incident: Details of Violence: The victim was raped by Eritrean Defence Forces troops who verbally assaulted her, expressing intent to destroy her child and stop her from giving birth. Context: Occurred during the occupation of her village.<br>                 <b>Date:</b> Not specified (during the conflict period)<br>                 <b>Group Affiliation:</b> Eritrean Defence Forces<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_4a2ce30d4e3b7725f3a78b09c7df4a68.setContent(html_91db60ce25d24a71f093ab39cc48b332);
+            
+        
+
+        marker_051b7bbfba05423dd3c1763dc9abe65d.bindPopup(popup_4a2ce30d4e3b7725f3a78b09c7df4a68)
+        ;
+
+        
+    
+    
+            marker_051b7bbfba05423dd3c1763dc9abe65d.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3f50c4a6a21e72fa63daea12320609f7 = L.marker(
+                [13.8524521, 37.1235436],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_12cae1396422001be3d6f7b66bff05e6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0b09bdbc232407ff6eda5471711ac6ad = $(`<div id="html_0b09bdbc232407ff6eda5471711ac6ad" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> One civilian woman of Tigrayan ethnicity. Type of Sexual Violence: Gang rape, verbal assault Legal Category: War crime Description of Incident: Details of Violence: The victim was gang-raped by Fano members who verbally assaulted her, expressing intent to destroy the Tigrayan ethnicity and drive them out of the area. Context: Occurred in a detention camp.<br>                 <b>Date:</b> Not specified (during the conflict period)<br>                 <b>Group Affiliation:</b> Fano (Amhara militia)<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_12cae1396422001be3d6f7b66bff05e6.setContent(html_0b09bdbc232407ff6eda5471711ac6ad);
+            
+        
+
+        marker_3f50c4a6a21e72fa63daea12320609f7.bindPopup(popup_12cae1396422001be3d6f7b66bff05e6)
+        ;
+
+        
+    
+    
+            marker_3f50c4a6a21e72fa63daea12320609f7.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d917e93cfaee1975ca7faac47c86a5e2 = L.marker(
+                [13.9117104, 38.890012],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_8d7dad69ef1c5962d4f2625b204bc6c2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a4b3dacd5df254ed7ecccca96052e5da = $(`<div id="html_a4b3dacd5df254ed7ecccca96052e5da" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> one Tigrayan woman. Type of Sexual Violence: rape Legal Category: War crime Description of Incident: Details of Violence:one victim was raped on top of her dead family members immediately after they had been killed by ENDF Context: Occurred during home invasion<br>                 <b>Date:</b> Not specified (during the conflict period)<br>                 <b>Group Affiliation:</b> ENDF<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_8d7dad69ef1c5962d4f2625b204bc6c2.setContent(html_a4b3dacd5df254ed7ecccca96052e5da);
+            
+        
+
+        marker_d917e93cfaee1975ca7faac47c86a5e2.bindPopup(popup_8d7dad69ef1c5962d4f2625b204bc6c2)
+        ;
+
+        
+    
+    
+            marker_d917e93cfaee1975ca7faac47c86a5e2.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_484accc82535074e1e0fd721970726da = L.marker(
+                [12.7091117, 38.8695994],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_a72f2b3c64015ba239d573e13e06afe5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_134ee8206d07d14060fe10c45941da0d = $(`<div id="html_134ee8206d07d14060fe10c45941da0d" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> number of victims not specified, Amharan girls as young as 11 and of women.  at least 11 towns and villages in Wag Hemra, North and South Wollo and North Shewa zones. Type of Sexual Violence: Multiple-perpetrator rape, individual rape Legal Category: War crime, crimes against humanity Description of Incident: Details of Violence: Systematic and widespread rapes during Tigray-aligned fighters’ presence in Amhara. Some women were raped inf ront of their children and subjected to verbal abuse during the rapes.<br>                 <b>Date:</b> Date of Incident: a between July and December 2021<br>                 <b>Group Affiliation:</b> TPLF<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_a72f2b3c64015ba239d573e13e06afe5.setContent(html_134ee8206d07d14060fe10c45941da0d);
+            
+        
+
+        marker_484accc82535074e1e0fd721970726da.bindPopup(popup_a72f2b3c64015ba239d573e13e06afe5)
+        ;
+
+        
+    
+    
+            marker_484accc82535074e1e0fd721970726da.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d24625a38b02b36b2be57ac5a1526ccd = L.marker(
+                [11.8379079, 39.2155604],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_af46812132b174d2eaf68e1f9573e758 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d5479e2942e0c821edc61d993a895a37 = $(`<div id="html_d5479e2942e0c821edc61d993a895a37" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> number of victims not specified, Amharan girls as young as 11 and of women.  at least 11 towns and villages in Wag Hemra, North and South Wollo and North Shewa zones. Type of Sexual Violence: Multiple-perpetrator rape, individual rape Legal Category: War crime, crimes against humanity Description of Incident: Details of Violence: Systematic and widespread rapes during Tigray-aligned fighters’ presence in Amhara. Some women were raped inf ront of their children and subjected to verbal abuse during the rapes.<br>                 <b>Date:</b> Date of Incident: a between July and December 2021<br>                 <b>Group Affiliation:</b> TPLF<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_af46812132b174d2eaf68e1f9573e758.setContent(html_d5479e2942e0c821edc61d993a895a37);
+            
+        
+
+        marker_d24625a38b02b36b2be57ac5a1526ccd.bindPopup(popup_af46812132b174d2eaf68e1f9573e758)
+        ;
+
+        
+    
+    
+            marker_d24625a38b02b36b2be57ac5a1526ccd.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_42dbc0b1c48de393ed61e4f4dd86722e = L.marker(
+                [10.9342833, 39.2021182],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_24c9cf1db97652a52405949b84b2d066 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f1c56f2fd9476d05d91a0e30a8604a4e = $(`<div id="html_f1c56f2fd9476d05d91a0e30a8604a4e" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> number of victims not specified, Amharan girls as young as 11 and of women.  at least 11 towns and villages in Wag Hemra, North and South Wollo and North Shewa zones. Type of Sexual Violence: Multiple-perpetrator rape, individual rape Legal Category: War crime, crimes against humanity Description of Incident: Details of Violence: Systematic and widespread rapes during Tigray-aligned fighters’ presence in Amhara. Some women were raped inf ront of their children and subjected to verbal abuse during the rapes.<br>                 <b>Date:</b> Date of Incident: a between July and December 2021<br>                 <b>Group Affiliation:</b> TPLF<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_24c9cf1db97652a52405949b84b2d066.setContent(html_f1c56f2fd9476d05d91a0e30a8604a4e);
+            
+        
+
+        marker_42dbc0b1c48de393ed61e4f4dd86722e.bindPopup(popup_24c9cf1db97652a52405949b84b2d066)
+        ;
+
+        
+    
+    
+            marker_42dbc0b1c48de393ed61e4f4dd86722e.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_68d64c74813f01ac52acc89820a00e9f = L.marker(
+                [9.6514595, 38.8510611],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_8a7b7770e1bf9c7b3add3480f3ba5a56 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_35621ddae965ba8bbceed355b461a27b = $(`<div id="html_35621ddae965ba8bbceed355b461a27b" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> number of victims not specified, Amharan girls as young as 11 and of women.  at least 11 towns and villages in Wag Hemra, North and South Wollo and North Shewa zones. Type of Sexual Violence: Multiple-perpetrator rape, individual rape Legal Category: War crime, crimes against humanity Description of Incident: Details of Violence: Systematic and widespread rapes during Tigray-aligned fighters’ presence in Amhara. Some women were raped inf ront of their children and subjected to verbal abuse during the rapes.<br>                 <b>Date:</b> Date of Incident: a between July and December 2021<br>                 <b>Group Affiliation:</b> TPLF<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_8a7b7770e1bf9c7b3add3480f3ba5a56.setContent(html_35621ddae965ba8bbceed355b461a27b);
+            
+        
+
+        marker_68d64c74813f01ac52acc89820a00e9f.bindPopup(popup_8a7b7770e1bf9c7b3add3480f3ba5a56)
+        ;
+
+        
+    
+    
+            marker_68d64c74813f01ac52acc89820a00e9f.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_801fdc5bf5065b276665ed51e8080821 = L.marker(
+                [14.0791446, 39.5936329],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_731206bcf4d014bcd5f541eb323a4e05 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6825875cadab10227efdee6397eefb3f = $(`<div id="html_6825875cadab10227efdee6397eefb3f" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> Sexual, physical and psychological violence were highest in central zone followed by eastern zone of Tigray. Of the 500 women that reported experiencing sexual violence, 202 (40.4%) women were from the central zone followed by 144 (28.8%) women in the eastern zone. 1 in 10 women and girls experienced sexual violence, mostly rape, physical violence and psychological violence. Many women experienced severe forms of sexual violence such as gang-rape, sexual slavery, insertion of foreign objects into the vagina and harassment. Gang-rape was the most common form of sexual violence reported among those who were raped. Young girls under 15 years and elderly women above 49 years were also victims of sexual violence, mostly rape.<br>                 <b>Date:</b> nan<br>                 <b>Group Affiliation:</b> nan<br>                 <b>Details:</b> Of the sexual violence survivors, rape accounted for 82.2% (411/500) cases, of which 68.4% (247) reported being gang raped. Young women (aged 15–24 years) were the most affected by sexual violence, 29.2% (146/500). Commonly reported SGBV- related issues were physical trauma, 23.8% (533/2241), sexually transmitted infections, 16.5% (68/411), HIV infection, 2.7% (11/411), unwanted pregnancy, 9.5% (39/411) and, depression 19.2% (431/2241). Most survivors (89.7%) did not receive any postviolence medical or psychological support.             </div>`)[0];
+                popup_731206bcf4d014bcd5f541eb323a4e05.setContent(html_6825875cadab10227efdee6397eefb3f);
+            
+        
+
+        marker_801fdc5bf5065b276665ed51e8080821.bindPopup(popup_731206bcf4d014bcd5f541eb323a4e05)
+        ;
+
+        
+    
+    
+            marker_801fdc5bf5065b276665ed51e8080821.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4c7c76e18ebed3f5d4d86d924b553e00 = L.marker(
+                [14.34583, 39.42861],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_4fe1630381ec3d617a3cd0af49ca9f89 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c8adc934fadff5403c00e9b2d4c13f65 = $(`<div id="html_c8adc934fadff5403c00e9b2d4c13f65" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> Number of Victims: 40 women (reported by civil society organization) Category of Victims: Women Demographics: Tigrayan ethnicity. Type of Sexual Violence: Rape, sexual slavery Legal Category: War crime, crimes against humanity Description of Incident: Details of Violence: Survivors experienced rape and sexual slavery in various settings, including inside an EDF military camp and in civilian residences, including their own homes. Perpetrators were identified through their uniforms, the Tigrinya dialect, and specific questions they asked, such as “Weren’t you chanting that Tigray will win?” and using the slur “Agame.” Context: Occurred during and after the signing of the CoHA on 2 November 2022.<br>                 <b>Date:</b> November 2022 - June 2023<br>                 <b>Group Affiliation:</b> Eritrean Defence Forces (EDF)<br>                 <b>Details:</b> Corroboration by Other Reports: Supported by civil society organization and medical expert testimonies. High frequency in Kokob Tsibah             </div>`)[0];
+                popup_4fe1630381ec3d617a3cd0af49ca9f89.setContent(html_c8adc934fadff5403c00e9b2d4c13f65);
+            
+        
+
+        marker_4c7c76e18ebed3f5d4d86d924b553e00.bindPopup(popup_4fe1630381ec3d617a3cd0af49ca9f89)
+        ;
+
+        
+    
+    
+            marker_4c7c76e18ebed3f5d4d86d924b553e00.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4b7c904f320c534ead59400374ce034b = L.marker(
+                [14.5, 39.66667],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_cc71f17feebad8560c4427db1b1b1c1e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b382f70ed12cdf601a3a4a537c31ef29 = $(`<div id="html_b382f70ed12cdf601a3a4a537c31ef29" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> Number of Victims: 2250 cases reported, including 76 new cases in one week in June 2023. Type of Sexual Violence: Rape, other forms of sexual violence Legal Category: War crime, crimes against humanity Description of Incident: Details of Violence: Survivors reported experiencing rape and other forms of sexual violence. Patients from Kokob Tsibah district came with physical and psychological harm. Context: Conflict-related sexual violence reported to a health centre in Eastern Tigray Zone. Category of Victims: Women Demographics: Tigrayan ethnicity. <br>                 <b>Date:</b> November 2020 - June 2023<br>                 <b>Group Affiliation:</b> EDF<br>                 <b>Details:</b> ources of Information: Medical expert testimony, health centre records             </div>`)[0];
+                popup_cc71f17feebad8560c4427db1b1b1c1e.setContent(html_b382f70ed12cdf601a3a4a537c31ef29);
+            
+        
+
+        marker_4b7c904f320c534ead59400374ce034b.bindPopup(popup_cc71f17feebad8560c4427db1b1b1c1e)
+        ;
+
+        
+    
+    
+            marker_4b7c904f320c534ead59400374ce034b.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b48e3c91ab51bf378f0571f1af3a76b5 = L.marker(
+                [14.34583, 39.42861],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_c6a66eb86d39292b66e4362b11645e5e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5c7abc6a4852caa23ef588f82b65c82f = $(`<div id="html_5c7abc6a4852caa23ef588f82b65c82f" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> Number of Victims: 15 women (including 4 interviewed survivors). Type of Sexual Violence: Rape, gang rape, sexual slavery DETENTION IN EDF CAMPS Legal Category: War crime, crimes against humanity Description of Incident: Details of Violence: Women were detained by EDF in a camp, subjected to rape, deprived of food and medical services, and experienced physical and psychological harm. They were also subjected to intrusive interrogations, offensive slurs, and mistreatment. Specific cases include: Fanta: Gang-raped by five EDF soldiers for three consecutive days (November 1-3, 2022) and subsequently held for nearly three months. Women were targeted on suspicion of having relatives or partners in the Tigrayan forces. Women were held in the camp and their homes under suspicion of their male relatives' involvement with Tigrayan forces. Category of Victims: Women Demographics: Tigrayan ethnicity. <br>                 <b>Date:</b>  November 1, 2022 - January 19, 2023<br>                 <b>Group Affiliation:</b> EDF<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_c6a66eb86d39292b66e4362b11645e5e.setContent(html_5c7abc6a4852caa23ef588f82b65c82f);
+            
+        
+
+        marker_b48e3c91ab51bf378f0571f1af3a76b5.bindPopup(popup_c6a66eb86d39292b66e4362b11645e5e)
+        ;
+
+        
+    
+    
+            marker_b48e3c91ab51bf378f0571f1af3a76b5.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c1f3d595474ad2792e55eda80120c0ed = L.marker(
+                [14.34583, 39.42861],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_7ba8a5bd988a54e662c2f4e6d1a8e2b4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_08d6aac31c99b195e9e57c63f3108023 = $(`<div id="html_08d6aac31c99b195e9e57c63f3108023" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> Number of Victims: Multiple women (including named survivors Bezawit and Mahlet). Type of Sexual Violence: Rape, gang rape, sexual slavery, DETENTION IN HOMES Legal Category: War crime, crimes against humanity Description of Incident: Details of Violence: Women were detained by EDF in their own homes or houses where EDF soldiers stayed. Survivors were prohibited from leaving and subjected to repeated instances of rape by multiple EDF soldiers. Bezawit: A 37-year-old mother of two, farmer, was held captive in her house for about three months and subjected to multiple incidents of rape. On November 2, 2022, three EDF soldiers took her to a nearby forest and raped her. She was later kept in her house and mistreated whenever she asked to leave. Mahlet: A 38-year-old woman who remained in the district to care for her ill and elderly mother. She was restricted from leaving her home and raped multiple times over nearly three months. Category of Victims: Women Demographics: Tigrayan ethnicity. <br>                 <b>Date:</b> Date of Incident: November 1, 2022 - January 19, 2023<br>                 <b>Group Affiliation:</b> EDF<br>                 <b>Details:</b> Post-CoHA agreement, ongoing in specified period             </div>`)[0];
+                popup_7ba8a5bd988a54e662c2f4e6d1a8e2b4.setContent(html_08d6aac31c99b195e9e57c63f3108023);
+            
+        
+
+        marker_c1f3d595474ad2792e55eda80120c0ed.bindPopup(popup_7ba8a5bd988a54e662c2f4e6d1a8e2b4)
+        ;
+
+        
+    
+    
+            marker_c1f3d595474ad2792e55eda80120c0ed.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1d6e9a23dcea079353f984f19cbd1f7b = L.marker(
+                [13.8524521, 37.1235436],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_8005a35477ba53ed5336fbf695e04fed = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c0fe89f9f01b1488aa538f8f34af8920 = $(`<div id="html_c0fe89f9f01b1488aa538f8f34af8920" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> 68 cases of rape by multiple perpetrators, 18 cases rape by a single perpetrator, 2 cases forced witnessing sexual violence<br>                 <b>Date:</b>  November 2020 to June 2023 <br>                 <b>Group Affiliation:</b> nan<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_8005a35477ba53ed5336fbf695e04fed.setContent(html_c0fe89f9f01b1488aa538f8f34af8920);
+            
+        
+
+        marker_1d6e9a23dcea079353f984f19cbd1f7b.bindPopup(popup_8005a35477ba53ed5336fbf695e04fed)
+        ;
+
+        
+    
+    
+            marker_1d6e9a23dcea079353f984f19cbd1f7b.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_533e098c8bd60bd8d5eb599e186efdc5 = L.marker(
+                [14.02038, 38.1639],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_fa9bc8ae1f8b6b7f2698fcb237efa02f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e4acffc60b3147776054f1a8f15ccac9 = $(`<div id="html_e4acffc60b3147776054f1a8f15ccac9" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> 31 cases rape by multiple perpetrators, 3 by single perpetrator<br>                 <b>Date:</b> November 2020 - June 2023<br>                 <b>Group Affiliation:</b> nan<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_fa9bc8ae1f8b6b7f2698fcb237efa02f.setContent(html_e4acffc60b3147776054f1a8f15ccac9);
+            
+        
+
+        marker_533e098c8bd60bd8d5eb599e186efdc5.bindPopup(popup_fa9bc8ae1f8b6b7f2698fcb237efa02f)
+        ;
+
+        
+    
+    
+            marker_533e098c8bd60bd8d5eb599e186efdc5.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_615df8c73b3e61bed17be278ca9e9fbd = L.marker(
+                [13.9117104, 38.890012],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_61c672245927a60b6f223f9718d59520 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_249ae62c96a1c4000b6362c45670b296 = $(`<div id="html_249ae62c96a1c4000b6362c45670b296" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> 53 multiple perpetrator, 12 single perpetrator, 1 forced witnessing, 1 forced touching<br>                 <b>Date:</b> November 2020 - June 2023<br>                 <b>Group Affiliation:</b> nan<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_61c672245927a60b6f223f9718d59520.setContent(html_249ae62c96a1c4000b6362c45670b296);
+            
+        
+
+        marker_615df8c73b3e61bed17be278ca9e9fbd.bindPopup(popup_61c672245927a60b6f223f9718d59520)
+        ;
+
+        
+    
+    
+            marker_615df8c73b3e61bed17be278ca9e9fbd.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_024ea8ade97ee53d40b4edbc53ec7fee = L.marker(
+                [14.3001, 36.6262],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_0e485d2d560f75a99e995172d41c3dce = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_74fe2a317fc8d3d8ff7c5d06b78e7f1c = $(`<div id="html_74fe2a317fc8d3d8ff7c5d06b78e7f1c" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> 17 multiple perpetrator, 1 captivity sexual violence, 5 single perpetrator <br>                 <b>Date:</b> November 2020 - June 2023<br>                 <b>Group Affiliation:</b> nan<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_0e485d2d560f75a99e995172d41c3dce.setContent(html_74fe2a317fc8d3d8ff7c5d06b78e7f1c);
+            
+        
+
+        marker_024ea8ade97ee53d40b4edbc53ec7fee.bindPopup(popup_0e485d2d560f75a99e995172d41c3dce)
+        ;
+
+        
+    
+    
+            marker_024ea8ade97ee53d40b4edbc53ec7fee.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_31ea3f9cf3ba17110b39c2b3c22874e4 = L.marker(
+                [13.4966644, 39.4768259],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_81d3cb0faa1d2aa1c0260d3a67dd7378 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d2f78c56327207f14be99f8dbebcd424 = $(`<div id="html_d2f78c56327207f14be99f8dbebcd424" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> 16 multiple perpetrator, 10 siungle perpetrator, 1 witnessing, 2 other <br>                 <b>Date:</b> November 2020 - June 2023<br>                 <b>Group Affiliation:</b> nan<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_81d3cb0faa1d2aa1c0260d3a67dd7378.setContent(html_d2f78c56327207f14be99f8dbebcd424);
+            
+        
+
+        marker_31ea3f9cf3ba17110b39c2b3c22874e4.bindPopup(popup_81d3cb0faa1d2aa1c0260d3a67dd7378)
+        ;
+
+        
+    
+    
+            marker_31ea3f9cf3ba17110b39c2b3c22874e4.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f8fb42712b90ee7e88dccc9086319325 = L.marker(
+                [12.9522081, 39.511176],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_a5e12217256c7bccdf75836fd36fcf9f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9f88c873d913fdfce09a82175c249073 = $(`<div id="html_9f88c873d913fdfce09a82175c249073" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> 3 single perpetrator, 4 multiple perpetrator, 1 beating, 1 unspecified <br>                 <b>Date:</b> November 2020 - June 2023<br>                 <b>Group Affiliation:</b> nan<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_a5e12217256c7bccdf75836fd36fcf9f.setContent(html_9f88c873d913fdfce09a82175c249073);
+            
+        
+
+        marker_f8fb42712b90ee7e88dccc9086319325.bindPopup(popup_a5e12217256c7bccdf75836fd36fcf9f)
+        ;
+
+        
+    
+    
+            marker_f8fb42712b90ee7e88dccc9086319325.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_67933296a0752847f89537ffac673688 = L.marker(
+                [14.0791446, 39.5936329],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_07bd45a737449c9d8aa77e164b7b67a0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c08677d4e798606e920f5ad7a8d43588 = $(`<div id="html_c08677d4e798606e920f5ad7a8d43588" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> 36 multiple perpetrator, 17 beatings, 2 forced witnessing, 1 unspecified, 1 forced touching<br>                 <b>Date:</b> November 2020 - June 2023<br>                 <b>Group Affiliation:</b> nan<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_07bd45a737449c9d8aa77e164b7b67a0.setContent(html_c08677d4e798606e920f5ad7a8d43588);
+            
+        
+
+        marker_67933296a0752847f89537ffac673688.bindPopup(popup_07bd45a737449c9d8aa77e164b7b67a0)
+        ;
+
+        
+    
+    
+            marker_67933296a0752847f89537ffac673688.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ee0056766f02a773054a398fa92a22e1 = L.marker(
+                [14.0, 37.0],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_98c2bce8d3bc2accf2225cc5d9d286b5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4f122900b8a68eac4c07e505586d4194 = $(`<div id="html_4f122900b8a68eac4c07e505586d4194" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> Number of Victims: 1 (Letay, 20-year-old woman). Type of Sexual Violence: Rape Legal Category: War crime, crimes against humanity Description of Incident: Details of Violence: Letay was assaulted in her home by armed, Amharic-speaking men wearing a mix of uniforms and civilian clothing. Prior to the assault, three men identified as Amhara Fano militia members told her family to leave, saying they "didn't want any Tigrayans" there. Context: Occurred during a period of forced displacement. Category of Victims: Women Demographics: Tigrayan ethnicity. <br>                 <b>Date:</b> Date of Incident: November 2020<br>                 <b>Group Affiliation:</b> Amhara Fano Militia<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_98c2bce8d3bc2accf2225cc5d9d286b5.setContent(html_4f122900b8a68eac4c07e505586d4194);
+            
+        
+
+        marker_ee0056766f02a773054a398fa92a22e1.bindPopup(popup_98c2bce8d3bc2accf2225cc5d9d286b5)
+        ;
+
+        
+    
+    
+            marker_ee0056766f02a773054a398fa92a22e1.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_76f3a0510b28aae2d05c1a12d0205a75 = L.marker(
+                [14.3930614, 37.7713978],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_ea4159af8f0f3b5bd66998f2b328b1ff = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e0e8bf9ee892e6dadffffe74cb8e0a0d = $(`<div id="html_e0e8bf9ee892e6dadffffe74cb8e0a0d" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> Number of Victims: 5 (including Nigist, a 35-year-old mother of two). Type of Sexual Violence: Rape Legal Category: War crime, crimes against humanity Description of Incident: Details of Violence: Nigist and four other women were assaulted sexually by Eritrean soldiers in Sheraro on November 21, 2020. Context: Occurred during a military operation. Category of Victims: Women Demographics: Tigrayan ethnicity. <br>                 <b>Date:</b> Date of Incident: November 21, 2020<br>                 <b>Group Affiliation:</b> EDF<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_ea4159af8f0f3b5bd66998f2b328b1ff.setContent(html_e0e8bf9ee892e6dadffffe74cb8e0a0d);
+            
+        
+
+        marker_76f3a0510b28aae2d05c1a12d0205a75.bindPopup(popup_ea4159af8f0f3b5bd66998f2b328b1ff)
+        ;
+
+        
+    
+    
+            marker_76f3a0510b28aae2d05c1a12d0205a75.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_af96895c699d364cec0440404cba6320 = L.marker(
+                [14.8087336, 37.9061032],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_45055f5803423718969d4264692663ef = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_472e027805bab0c371e9a1f1f8184196 = $(`<div id="html_472e027805bab0c371e9a1f1f8184196" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> Number of Victims: 1 (Yemisrach, a 24-year-old woman). Type of Sexual Violence: Rape, sexual slavery Legal Category: War crime, crimes against humanity Description of Incident: Details of Violence: Yemisrach and her friend were assaulted by four EDF soldiers for 28 days despite her informing them that she was HIV positive. Context: Occurred during a period of conflict and military occupation. Category of Victims: Women Demographics: Tigrayan ethnicity. <br>                 <b>Date:</b> Not specified (during the conflict period)<br>                 <b>Group Affiliation:</b> EDF<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_45055f5803423718969d4264692663ef.setContent(html_472e027805bab0c371e9a1f1f8184196);
+            
+        
+
+        marker_af96895c699d364cec0440404cba6320.bindPopup(popup_45055f5803423718969d4264692663ef)
+        ;
+
+        
+    
+    
+            marker_af96895c699d364cec0440404cba6320.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dfa406d5b777849f81ea27fbe164d1de = L.marker(
+                [14.42972, 37.88778],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_e7a1aafc664b6e30988043e17ba5d0e2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1b31c8953e1d56c2e0be92df50405adb = $(`<div id="html_1b31c8953e1d56c2e0be92df50405adb" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> 1 victim, 17 year old girl. sexual slavery. abducted by Eritrean soldiers in Zebangedena and held captive for two weeks.<br>                 <b>Date:</b> Not specified (during the conflict period)<br>                 <b>Group Affiliation:</b> EDF<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_e7a1aafc664b6e30988043e17ba5d0e2.setContent(html_1b31c8953e1d56c2e0be92df50405adb);
+            
+        
+
+        marker_dfa406d5b777849f81ea27fbe164d1de.bindPopup(popup_e7a1aafc664b6e30988043e17ba5d0e2)
+        ;
+
+        
+    
+    
+            marker_dfa406d5b777849f81ea27fbe164d1de.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fc32c33004295d65905dff49896cd63f = L.marker(
+                [14.2876868, 36.6088415],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_c767db7af2ffc7b8de00635f2a97f97c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7da74796e5de97772c9df68f70196f67 = $(`<div id="html_7da74796e5de97772c9df68f70196f67" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> 1 victim 16 year old girl. sexual slavery. abducted and held captive in Adebai by Ethiopian soldiers while fleeing with her mother and siblings.<br>                 <b>Date:</b> Not specified (during the conflict period)<br>                 <b>Group Affiliation:</b> ENDF<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_c767db7af2ffc7b8de00635f2a97f97c.setContent(html_7da74796e5de97772c9df68f70196f67);
+            
+        
+
+        marker_fc32c33004295d65905dff49896cd63f.bindPopup(popup_c767db7af2ffc7b8de00635f2a97f97c)
+        ;
+
+        
+    
+    
+            marker_fc32c33004295d65905dff49896cd63f.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_381af3b1b3335a6729ee15935b93788a = L.marker(
+                [14.8087336, 37.9061032],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_bdfaca2861c60d05bf212dd879ef7509 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_22923152b47de82524de5a5c5cc1d98e = $(`<div id="html_22923152b47de82524de5a5c5cc1d98e" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> 21 year old woman and approximately 30 other women. sexxual slavery. abducted by Eritrean and Ethiopian soldiers on 5 November 2020 and held for 40 days with some 30 other women<br>                 <b>Date:</b> November 5th 2020<br>                 <b>Group Affiliation:</b> ENDF and EDF<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_bdfaca2861c60d05bf212dd879ef7509.setContent(html_22923152b47de82524de5a5c5cc1d98e);
+            
+        
+
+        marker_381af3b1b3335a6729ee15935b93788a.bindPopup(popup_bdfaca2861c60d05bf212dd879ef7509)
+        ;
+
+        
+    
+    
+            marker_381af3b1b3335a6729ee15935b93788a.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a3f048d7e8b89f30c73693bcbe42c958 = L.marker(
+                [14.0721832, 36.5657335],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_4e5fc92548bd07ed5209a3117676ccf7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5c2ff097bdc717803a1c40384993efdc = $(`<div id="html_5c2ff097bdc717803a1c40384993efdc" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> 35 year old mother of three and her 16 year old daughter. sexual slavery, As the conflict broke out the local authorities and police were ousted and replaced by the incoming forces — army units and miltias — resulting in large numbers of arbitrary, unregulated detentions. Lulit, a 35-year-old widow and mother of three girls, told Amnesty International that she was assaulted  by seven Amhara militia members near Mai Kadra on 16 November 2020. The men also abducted her 16-year-old daughter.<br>                 <b>Date:</b> November 16th 2020<br>                 <b>Group Affiliation:</b> Amhara Fano Militia<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_4e5fc92548bd07ed5209a3117676ccf7.setContent(html_5c2ff097bdc717803a1c40384993efdc);
+            
+        
+
+        marker_a3f048d7e8b89f30c73693bcbe42c958.bindPopup(popup_4e5fc92548bd07ed5209a3117676ccf7)
+        ;
+
+        
+    
+    
+            marker_a3f048d7e8b89f30c73693bcbe42c958.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5bfde79531ead6ec0a8640505ea91ea2 = L.marker(
+                [14.0721832, 36.5657335],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_37727d4f405a8002de435c4434e18c0d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a9d77c7d081929ba8f55168a76e880b3 = $(`<div id="html_a9d77c7d081929ba8f55168a76e880b3" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> 39-year-old mother of two and her children, two other women. brutality accompanying sexual violence (insertion of objects, torture)<br>                 <b>Date:</b> Not specified (during the conflict period)<br>                 <b>Group Affiliation:</b> EDF<br>                 <b>Details:</b> Survivors recounted additional acts of brutality accompanying the rapes, with perpetrators — mostly Eritrean soldiers — inflicting such torture solely to cause maximum pain and damage, not to extract information.              </div>`)[0];
+                popup_37727d4f405a8002de435c4434e18c0d.setContent(html_a9d77c7d081929ba8f55168a76e880b3);
+            
+        
+
+        marker_5bfde79531ead6ec0a8640505ea91ea2.bindPopup(popup_37727d4f405a8002de435c4434e18c0d)
+        ;
+
+        
+    
+    
+            marker_5bfde79531ead6ec0a8640505ea91ea2.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1385277e1c85945c1ecab3436c9f43ff = L.marker(
+                [14.1859674, 39.5634336],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_4a46f8a3968fbe5abfbd458986c3c2f3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bed4d796566e6bf67f751fdbe312a56a = $(`<div id="html_bed4d796566e6bf67f751fdbe312a56a" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> One girl, age not specified. brutality accompanying sexual violence (insertion of objects, torture, etc). Taken off a minibus, released 15 February 2021<br>                 <b>Date:</b>  6 February 2021 until 15 February 2021<br>                 <b>Group Affiliation:</b> EDF<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_4a46f8a3968fbe5abfbd458986c3c2f3.setContent(html_bed4d796566e6bf67f751fdbe312a56a);
+            
+        
+
+        marker_1385277e1c85945c1ecab3436c9f43ff.bindPopup(popup_4a46f8a3968fbe5abfbd458986c3c2f3)
+        ;
+
+        
+    
+    
+            marker_1385277e1c85945c1ecab3436c9f43ff.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_42225b8cd69e829cb9730188f1974ede = L.marker(
+                [14.02038, 38.1639],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_500a50d6c48eb478324d5547c64bed70 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1b8bc23c61a23ebe2cfbbc11e35a2b8d = $(`<div id="html_1b8bc23c61a23ebe2cfbbc11e35a2b8d" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> one 18 year-old girl, single perpetrator rape while trying to cross border into Sudan. <br>                 <b>Date:</b> January 2021<br>                 <b>Group Affiliation:</b> Amharic-speaking soldiers<br>                 <b>Details:</b> Ethiopian and Eritrean soldiers efforts to prevent Tigrayans from crossing the border into Sudan.             </div>`)[0];
+                popup_500a50d6c48eb478324d5547c64bed70.setContent(html_1b8bc23c61a23ebe2cfbbc11e35a2b8d);
+            
+        
+
+        marker_42225b8cd69e829cb9730188f1974ede.bindPopup(popup_500a50d6c48eb478324d5547c64bed70)
+        ;
+
+        
+    
+    
+            marker_42225b8cd69e829cb9730188f1974ede.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9daaf7ca2f761ddf4211b5fb66c318f5 = L.marker(
+                [14.2876868, 36.6088415],
+                {}
+            ).addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+        var popup_de2ce7e3d72bbdc394575020250cafbb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bc1131a69e07e453e89eb42ed97dc0e6 = $(`<div id="html_bc1131a69e07e453e89eb42ed97dc0e6" style="width: 100.0%; height: 100.0%;">                 <b>Incident:</b> one 28 year-old woman. gang rape while trying to cross into Sudan. Raped for several days by both Amhara and Eritrean forces<br>                 <b>Date:</b> December 2020<br>                 <b>Group Affiliation:</b> Amhara forces and Eritrean Defense Forces<br>                 <b>Details:</b> nan             </div>`)[0];
+                popup_de2ce7e3d72bbdc394575020250cafbb.setContent(html_bc1131a69e07e453e89eb42ed97dc0e6);
+            
+        
+
+        marker_9daaf7ca2f761ddf4211b5fb66c318f5.bindPopup(popup_de2ce7e3d72bbdc394575020250cafbb)
+        ;
+
+        
+    
+    
+            marker_9daaf7ca2f761ddf4211b5fb66c318f5.bindTooltip(
+                `<div>
+                     Click for more info
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            tile_layer_31c9217d5aea204ebeb4d6461582cfbe.addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+    
+            tile_layer_31c9217d5aea204ebeb4d6461582cfbe.addTo(map_6a45e953c903d7839a1c6d12e3f89e70);
+        
+</script>
+</html>
